@@ -17,6 +17,10 @@ func main() {
 	}
 
 	fmt.Println(auth.DataAkun)
+	err = auth.Login()
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
 	// data.InputData()
 	// data.InputData()
 	// data.TampilkanSemuaData()
