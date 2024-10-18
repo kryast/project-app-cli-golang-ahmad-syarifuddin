@@ -15,8 +15,8 @@ func Login() error {
 	fmt.Scan(&password)
 
 	for _, akun := range DataAkun {
-		if akun.username == username {
-			if akun.password == password {
+		if akun.Username == username {
+			if akun.Password == password {
 				fmt.Println("Berhasil Login!")
 				return nil
 			}

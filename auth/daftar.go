@@ -6,7 +6,7 @@ import (
 )
 
 type Akun struct {
-	username, password string
+	Username, Password string
 }
 
 var DataAkun []Akun
@@ -30,7 +30,7 @@ func DaftarAkun() (Akun, []Akun, error) {
 
 func validasiAkun(username, password string) error {
 	for _, akun := range DataAkun {
-		if akun.username == username {
+		if akun.Username == username {
 			return errors.New("username sudah digunakan")
 		}
 	}
