@@ -20,11 +20,3 @@ func DaftarAkun() (Akun, []Akun) {
 	DataAkun = append(DataAkun, Akun{username, password})
 	return Akun{username, password}, DataAkun
 }
-
-// var DataAkun []Akun
-
-// func TampungAkun(Akun ...Akun) []Akun {
-
-// 	DataAkun = append(DataAkun, Akun...)
-// 	return DataAkun
-// }

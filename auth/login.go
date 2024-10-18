@@ -5,14 +5,22 @@ import (
 	"fmt"
 )
 
-func Login(username string, password string) error {
+func Login() error {
+	var username string
+	var password string
+
+	fmt.Print("Masukkan Username :")
+	fmt.Scan(&username)
+	fmt.Print("Masukkan Password :")
+	fmt.Scan(&password)
 
 	for _, akun := range DataAkun {
-		if akun.username == username && akun.password == password {
-			fmt.Printf("Data Akun %s Yaitu %+v\n ", username, password)
-			return nil
+		if akun.username != username {
+			return errors.New("username salah")
+		} else if akun.password != password {
+			return errors.New("password salah")
 		}
 
 	}
-	return errors.New("username dan password salah")
+	return nil
 }
