@@ -10,7 +10,7 @@ func (d *DataPegawai) TampilkanSemuaData() {
 	}
 
 	fmt.Println("=============================================")
-	fmt.Println("Daftar Semua Data:")
+	fmt.Println("Daftar Semua Data Pegawai:")
 	fmt.Println("=============================================")
 	for _, data := range DataDataPegawai {
 		fmt.Printf("Nama: %s, Kota: %s, Negara: %s\n", data.Nama, data.Kota, data.Negara)

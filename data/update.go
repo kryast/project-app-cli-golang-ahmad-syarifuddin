@@ -3,14 +3,15 @@ package data
 import "fmt"
 
 func (d *DataPegawai) UpdateData() {
+
+	if len(DataDataPegawai) <= 0 {
+		fmt.Println("Data Masih kosong")
+		return
+	}
+
 	var Nama string
 	fmt.Print("Masukkan Nama yang ingin diperbarui: ")
 	fmt.Scan(&Nama)
-
-	if Nama == "" {
-		fmt.Println("Error: Nama tidak boleh kosong.")
-		return
-	}
 
 	for i, data := range DataDataPegawai {
 		if data.Nama == Nama {
@@ -33,14 +34,15 @@ func (d *DataPegawai) UpdateData() {
 }
 
 func (k *DataKonsumen) UpdateData() {
+
+	if len(DataDataKonsumen) <= 0 {
+		fmt.Println("Data Masih kosong")
+		return
+	}
+
 	var Nama string
 	fmt.Print("Masukkan Nama Konsumen yang ingin diperbarui: ")
 	fmt.Scan(&Nama)
-
-	if Nama == "" {
-		fmt.Println("Error: Nama tidak boleh kosong.")
-		return
-	}
 
 	for i, data := range DataDataKonsumen {
 		if data.Nama == Nama {
@@ -60,6 +62,8 @@ func (k *DataKonsumen) UpdateData() {
 			}
 
 			var SaldoBaru int
+			fmt.Println("----------------------------------------------------------")
+			fmt.Println("(Ketik berupa Angka, Jika tidak maka akan kembali Log out)")
 			fmt.Print("Masukkan Saldo baru: ")
 			fmt.Scan(&SaldoBaru)
 
