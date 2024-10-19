@@ -31,10 +31,11 @@ func Home() {
 	case 1:
 		ClearScreen()
 		fmt.Println("Silahkan Login")
-		// fmt.Println(auth.DataAkun)
 		if err := auth.Login(); err != nil {
 			Panik(err)
 		}
+		ClearScreen()
+		Database()
 	case 2:
 		ClearScreen()
 		fmt.Println("Silahkan Daftar Akun")

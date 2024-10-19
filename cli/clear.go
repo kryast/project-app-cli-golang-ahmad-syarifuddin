@@ -36,3 +36,20 @@ func BackHome() {
 		Panik(err)
 	}
 }
+
+func BackDatabase() {
+	var input int
+	fmt.Println("=============================")
+	fmt.Println("Silahkan Kembali ke Menu Database")
+	fmt.Println("=============================")
+	fmt.Println("0. Kembali")
+	fmt.Print("Masukkan nomor menu: ")
+	fmt.Scan(&input)
+	ClearScreen()
+	if input == 0 {
+		Database()
+	} else {
+		fmt.Println("Error !!")
+		Database()
+	}
+}

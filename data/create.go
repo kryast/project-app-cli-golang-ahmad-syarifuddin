@@ -32,7 +32,6 @@ func InputDataPegawai() (DataPegawai, []DataPegawai) {
 	return DataPegawai{Nama, Kota, Negara}, DataDataPegawai
 }
 
-// InputDataKonsumen function to input consumer data with validation
 func InputDataKonsumen() (DataKonsumen, []DataKonsumen) {
 	var Nama, Alamat string
 	var Saldo Saldo
@@ -51,7 +50,7 @@ func InputDataKonsumen() (DataKonsumen, []DataKonsumen) {
 		return DataKonsumen{}, DataDataKonsumen
 	}
 
-	Saldo.Kas = 0 // Initialize Saldo to 0
+	Saldo.Kas = 0
 	DataDataKonsumen = append(DataDataKonsumen, DataKonsumen{Nama, Alamat, Saldo})
 	fmt.Println("Data Konsumen berhasil ditambah!")
 	fmt.Println("-----------------------")
