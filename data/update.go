@@ -17,10 +17,23 @@ func (d *DataPegawai) UpdateData() {
 		if data.Nama == Nama {
 			fmt.Print("Masukkan Nama baru: ")
 			fmt.Scan(&data.Nama)
+			if len(data.Nama) < 3 {
+				fmt.Println("minimal 3 karakter")
+				return
+			}
 			fmt.Print("Masukkan Kota baru: ")
 			fmt.Scan(&data.Kota)
+			if len(data.Kota) < 3 {
+				fmt.Println("minimal 3 karakter")
+				return
+			}
+
 			fmt.Print("Masukkan Negara baru: ")
 			fmt.Scan(&data.Negara)
+			if len(data.Negara) < 3 {
+				fmt.Println("minimal 3 karakter")
+				return
+			}
 
 			DataDataPegawai[i] = data
 			fmt.Println("Data berhasil diperbarui!")
@@ -49,15 +62,15 @@ func (k *DataKonsumen) UpdateData() {
 			var NamaBaru, AlamatBaru string
 			fmt.Print("Masukkan Nama baru: ")
 			fmt.Scan(&NamaBaru)
-			if NamaBaru == "" {
-				fmt.Println("Error: Nama baru tidak boleh kosong.")
+			if len(NamaBaru) < 3 {
+				fmt.Println("minimal 3 karakter")
 				return
 			}
 
 			fmt.Print("Masukkan Alamat baru: ")
 			fmt.Scan(&AlamatBaru)
-			if AlamatBaru == "" {
-				fmt.Println("Error: Alamat tidak boleh kosong.")
+			if len(AlamatBaru) < 3 {
+				fmt.Println("minimal 3 karakter")
 				return
 			}
 

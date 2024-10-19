@@ -7,22 +7,22 @@ func InputDataPegawai() (DataPegawai, []DataPegawai) {
 
 	fmt.Print("Masukkan Nama: ")
 	fmt.Scan(&Nama)
-	if Nama == "" {
-		fmt.Println("Error: Nama tidak boleh kosong.")
+	if len(Nama) < 3 {
+		fmt.Println("minimal 3 karakter")
 		return DataPegawai{}, DataDataPegawai
 	}
 
 	fmt.Print("Masukkan Kota asal: ")
 	fmt.Scan(&Kota)
-	if Kota == "" {
-		fmt.Println("Error: Kota tidak boleh kosong.")
+	if len(Kota) < 3 {
+		fmt.Println("minimal 3 karakter")
 		return DataPegawai{}, DataDataPegawai
 	}
 
 	fmt.Print("Masukkan Negara asal: ")
 	fmt.Scan(&Negara)
-	if Negara == "" {
-		fmt.Println("Error: Negara tidak boleh kosong.")
+	if len(Negara) < 3 {
+		fmt.Println("minimal 3 karakter")
 		return DataPegawai{}, DataDataPegawai
 	}
 
@@ -38,15 +38,15 @@ func InputDataKonsumen() (DataKonsumen, []DataKonsumen) {
 
 	fmt.Print("Masukkan Nama Konsumen: ")
 	fmt.Scan(&Nama)
-	if Nama == "" {
-		fmt.Println("Error: Nama tidak boleh kosong.")
+	if len(Nama) < 3 {
+		fmt.Println("minimal 3 karakter")
 		return DataKonsumen{}, DataDataKonsumen
 	}
 
 	fmt.Print("Masukkan Alamat Konsumen: ")
 	fmt.Scan(&Alamat)
-	if Alamat == "" {
-		fmt.Println("Error: Alamat tidak boleh kosong.")
+	if len(Alamat) < 3 {
+		fmt.Println("minimal 3 karakter")
 		return DataKonsumen{}, DataDataKonsumen
 	}
 
