@@ -76,14 +76,19 @@ func Home() {
 			BackHome()
 		}
 
+		found := false
+
 		for _, akun := range auth.DataAkun {
 			if akun.Username == input {
 				fmt.Printf("Username: %s\nPassword: %s\n", akun.Username, akun.Password)
-				BackHome()
-			} else {
-				fmt.Println("Username tidak ditemukan. Silakan coba lagi.")
+				found = true
 				BackHome()
 			}
+		}
+
+		if !found {
+			fmt.Println("Error: Username tidak ditemukan. ")
+			BackHome()
 		}
 
 	case 99:
