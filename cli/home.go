@@ -67,15 +67,14 @@ func Home() {
 
 	case 4:
 		ClearScreen()
+		if len(auth.DataAkun) <= 0 {
+			fmt.Println("Data Masih kosong")
+			BackHome()
+		}
 
 		var input string
 		fmt.Print("Masukkan Username: ")
 		fmt.Scan(&input)
-
-		if input == "" {
-			fmt.Println("Username tidak boleh kosong.")
-			BackHome()
-		}
 
 		found := false
 
